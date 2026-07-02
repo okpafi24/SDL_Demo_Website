@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SASK DLC — Digital Learning Centre By Joshua Okpafi!!!!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0b1f3a;
+    --navy-light:#132a4d;
+    --blue:#2f6fed;
+    --blue-light:#eef4ff;
+    --green:#16a34a;
+    --green-light:#e7f7ee;
+    --purple:#7c5cff;
+    --purple-light:#f1edff;
+    --pink:#ef4d6c;
+    --pink-light:#fdeaf0;
+    --orange:#f59e0b;
+    --orange-light:#fef3e2;
+    --ink:#0f1b2d;
+    --gray-900:#1a2332;
+    --gray-600:#5b6b82;
+    --gray-400:#8f9dae;
+    --gray-200:#e6eaf1;
+    --gray-100:#f4f6fa;
+    --white:#ffffff;
+    --radius:14px;
+    --shadow: 0 1px 2px rgba(15,27,45,.04), 0 8px 24px rgba(15,27,45,.05);
+
+    /* Saskatchewan-inspired brand palette: prairie green + canola gold */
+    --brand-green:#0b6a41;
+    --brand-green-dark:#063f27;
+    --brand-green-light:#e7f4ec;
+    --brand-gold:#f1c730;
+    --brand-gold-dark:#c99a12;
+    --cream:#fbf8f0;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background:var(--gray-100);
+    color:var(--ink);
+  }
+  .app-shell{display:flex;min-height:100vh;}
+  a{text-decoration:none;color:inherit;cursor:pointer;}
+  ul{list-style:none;margin:0;padding:0;}
+  button{font-family:inherit;cursor:pointer;}
+  h1,h2,h3,h4,.brand-text h1,.stat-value,.event-title,.job-top h4,.promo-body h3{
+    font-family:'Sora','Inter',sans-serif;
+  }
+  ::selection{background:#2f6fed;color:#fff;}
+  :focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:6px;}
+
+  /* ================= MARKETING SITE ================= */
+
+  .util-bar{
+    background:var(--brand-green-dark);color:#cfe6d8;font-size:12px;
+    padding:7px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;
+  }
+  .util-bar a{color:#cfe6d8;transition:color .15s ease;}
+  .util-bar a:hover{color:var(--brand-gold);}
+  .util-left{display:flex;gap:20px;flex-wrap:wrap;}
+  .util-left span{display:inline-flex;align-items:center;gap:6px;}
+  .util-right{display:flex;gap:14px;}
+  .util-right a{display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.1);transition:background .15s ease;}
+  .util-right a:hover{background:var(--brand-gold);color:var(--brand-green-dark);}
+
+  .site-header{
+    background:#fff;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;
+    position:sticky;top:0;z-index:50;box-shadow:0 1px 0 var(--gray-200);flex-wrap:wrap;gap:14px;
+  }
+  .site-logo{display:flex;align-items:center;gap:11px;}
+  .site-logo-icon{
+    width:42px;height:42px;border-radius:10px;flex-shrink:0;
+    background:linear-gradient(135deg,var(--brand-green),var(--brand-green-dark));
+    display:flex;align-items:center;justify-content:center;
+  }
+  .site-logo-text h1{font-family:'Sora',sans-serif;font-size:17px;margin:0;color:var(--brand-green-dark);font-weight:800;letter-spacing:.2px;}
+  .site-logo-text p{margin:1px 0 0;font-size:11px;color:var(--gray-600);letter-spacing:.3px;}
+
+  .site-nav-links{display:flex;align-items:center;gap:28px;flex-wrap:wrap;}
+  .site-nav-links a{
+    font-size:13.5px;font-weight:600;color:var(--gray-900);position:relative;padding:6px 0;
+    transition:color .15s ease;
+  }
+  .site-nav-links a::after{
+    content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--brand-gold);
+    transition:width .18s ease;
+  }
+  .site-nav-links a:hover{color:var(--brand-green);}
+  .site-nav-links a:hover::after{width:100%;}
+
+  .header-cta{display:flex;align-items:center;gap:10px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;
+    padding:10px 18px;border-radius:9px;border:none;transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+  .btn-ghost{background:var(--brand-green-light);color:var(--brand-green-dark);}
+  .btn-ghost:hover{background:#d9eee0;transform:translateY(-2px);}
+  .btn-gold{background:var(--brand-gold);color:#3a2c02;box-shadow:0 6px 16px rgba(241,199,48,.35);}
+  .btn-gold:hover{background:var(--brand-gold-dark);transform:translateY(-2px);box-shadow:0 10px 22px rgba(201,154,18,.4);}
+  .btn-outline-white{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.7);backdrop-filter:blur(2px);}
+  .btn-outline-white:hover{background:rgba(255,255,255,.22);transform:translateY(-2px);}
+
+  /* ---- Hero ---- */
+  .hero{
+    position:relative;min-height:520px;display:flex;align-items:center;
+    background:
+      linear-gradient(120deg, rgba(6,63,39,.92) 0%, rgba(11,106,65,.72) 45%, rgba(11,106,65,.35) 100%),
+      url('https://commons.wikimedia.org/wiki/Special:FilePath/Canola_field.jpg?width=1800') center/cover no-repeat;
+    color:#fff;overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(0deg, var(--gray-100) 0%, rgba(244,246,250,0) 14%);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;z-index:2;max-width:640px;padding:70px 32px 90px;}
+  .hero-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.35);padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;
+    letter-spacing:.3px;margin-bottom:20px;
+  }
+  .hero-eyebrow .dotpulse{width:7px;height:7px;border-radius:50%;background:var(--brand-gold);}
+  .hero h2{
+    font-family:'Sora',sans-serif;font-size:44px;line-height:1.12;margin:0 0 18px;font-weight:800;
+    text-shadow:0 2px 18px rgba(0,0,0,.18);
+  }
+  .hero h2 span{color:var(--brand-gold);}
+  .hero p.lede{font-size:16px;line-height:1.65;color:#eaf3ec;margin:0 0 30px;max-width:520px;}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px;}
+  .hero-trust{display:flex;gap:26px;flex-wrap:wrap;}
+  .hero-trust div{display:flex;flex-direction:column;}
+  .hero-trust .num{font-family:'Sora',sans-serif;font-size:22px;font-weight:800;color:#fff;}
+  .hero-trust .lbl{font-size:11.5px;color:#cfe6d8;margin-top:2px;}
+
+  /* ---- Section shell ---- */
+  .section{padding:64px 32px;max-width:1360px;margin:0 auto;}
+  .section-head{max-width:640px;margin:0 auto 40px;text-align:center;}
+  .eyebrow{
+    display:inline-block;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;
+    color:var(--brand-green);background:var(--brand-green-light);padding:5px 12px;border-radius:20px;margin-bottom:14px;
+  }
+  .section-head h3{font-family:'Sora',sans-serif;font-size:30px;margin:0 0 12px;color:var(--gray-900);font-weight:800;}
+  .section-head p{font-size:14.5px;color:var(--gray-600);line-height:1.6;margin:0;}
+
+  /* ---- Pathways ---- */
+  .pathways-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .pathway-card{
+    background:#fff;border-radius:18px;padding:28px 24px;border:1px solid var(--gray-200);
+    box-shadow:var(--shadow);transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+  }
+  .pathway-card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(11,106,65,.14);border-color:var(--brand-green);}
+  .pathway-icon{
+    width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+    background:var(--brand-green-light);color:var(--brand-green);
+  }
+  .pathway-card:nth-child(2) .pathway-icon{background:#fdf3d6;color:var(--brand-gold-dark);}
+  .pathway-card:nth-child(3) .pathway-icon{background:var(--blue-light);color:var(--blue);}
+  .pathway-card h4{font-family:'Sora',sans-serif;font-size:17px;margin:0 0 10px;color:var(--gray-900);}
+  .pathway-card p{font-size:13.5px;color:var(--gray-600);line-height:1.65;margin:0 0 16px;}
+  .pathway-link{font-size:13px;font-weight:700;color:var(--brand-green);display:inline-flex;align-items:center;gap:6px;transition:gap .18s ease;}
+  .pathway-link:hover{gap:10px;}
+
+  /* ---- Gallery ---- */
+  .gallery-wrap{background:var(--brand-green-dark);}
+  .gallery-inner{max-width:1360px;margin:0 auto;padding:64px 32px;}
+  .gallery-inner .section-head h3{color:#fff;}
+  .gallery-inner .section-head p{color:#bcdcc7;}
+  .gallery-inner .eyebrow{background:rgba(241,199,48,.16);color:var(--brand-gold);}
+  .gallery-grid{
+    display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:220px 220px;gap:16px;
+  }
+  .gallery-item{
+    position:relative;border-radius:16px;overflow:hidden;background:var(--brand-green);
+  }
+  .gallery-item:first-child{grid-row:1 / 3;}
+  .gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;}
+  .gallery-item:hover img{transform:scale(1.06);}
+  .gallery-caption{
+    position:absolute;left:0;right:0;bottom:0;padding:16px;
+    background:linear-gradient(0deg, rgba(4,30,18,.85), rgba(4,30,18,0));
+    color:#fff;font-size:13px;font-weight:600;
+  }
+
+  /* ---- CTA band ---- */
+  .cta-band{
+    background:linear-gradient(120deg, var(--brand-green) 0%, var(--brand-green-dark) 100%);
+    color:#fff;padding:56px 32px;text-align:center;position:relative;overflow:hidden;
+  }
+  .cta-band::before{
+    content:"";position:absolute;top:-60px;right:-60px;width:260px;height:260px;border-radius:50%;
+    background:rgba(241,199,48,.14);
+  }
+  .cta-band-inner{position:relative;z-index:1;max-width:620px;margin:0 auto;}
+  .cta-band h3{font-family:'Sora',sans-serif;font-size:28px;margin:0 0 12px;font-weight:800;}
+  .cta-band p{font-size:14.5px;color:#d7ecdd;margin:0 0 26px;}
+  .cta-band .hero-actions{justify-content:center;margin-bottom:0;}
+
+  /* ---- Demo dashboard section header ---- */
+  .demo-section-head{
+    max-width:1360px;margin:0 auto;padding:52px 32px 0;text-align:center;
+  }
+
+  /* ---- Site footer ---- */
+  .site-footer{background:#0d1f16;color:#b9cec0;padding:56px 32px 26px;}
+  .footer-grid{
+    max-width:1360px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:36px;padding-bottom:36px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  .footer-brand .site-logo-icon{width:36px;height:36px;}
+  .footer-brand h4{font-family:'Sora',sans-serif;color:#fff;font-size:15px;margin:0;}
+  .footer-grid p{font-size:12.5px;line-height:1.7;color:#9fb8a9;max-width:280px;}
+  .footer-social{display:flex;gap:10px;margin-top:16px;}
+  .footer-social a{
+    width:32px;height:32px;border-radius:9px;background:rgba(255,255,255,.06);
+    display:flex;align-items:center;justify-content:center;color:#cfe6d8;transition:background .18s ease, color .18s ease, transform .18s ease;
+  }
+  .footer-social a:hover{background:var(--brand-gold);color:#3a2c02;transform:translateY(-2px);}
+  .footer-col h5{color:#fff;font-size:13px;font-weight:700;margin:0 0 16px;letter-spacing:.3px;}
+  .footer-col ul{display:flex;flex-direction:column;gap:11px;}
+  .footer-col a{font-size:13px;color:#9fb8a9;transition:color .15s ease;}
+  .footer-col a:hover{color:var(--brand-gold);}
+  .footer-contact li{font-size:12.5px;line-height:1.6;color:#9fb8a9;display:flex;gap:9px;align-items:flex-start;}
+  .footer-contact svg{flex-shrink:0;margin-top:2px;color:var(--brand-gold);}
+  .footer-bottom{
+    max-width:1360px;margin:20px auto 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+    font-size:12px;color:#7f9a8a;
+  }
+  .footer-bottom a{color:#7f9a8a;}
+  .footer-bottom a:hover{color:var(--brand-gold);}
+
+  @media (max-width:1000px){
+    .pathways-grid{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px;}
+    .gallery-item:first-child{grid-row:auto;grid-column:1 / 3;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    .site-nav-links{display:none;}
+    .hero h2{font-size:32px;}
+  }
+
+  /* ---------- Sidebar ---------- */
+  .sidebar{
+    width:264px;
+    background:var(--navy);
+    color:#cdd8ee;
+    flex-shrink:0;
+    display:flex;
+    flex-direction:column;
+    padding:20px 16px 24px;
+    position:sticky;
+    top:0;
+    height:100vh;
+    overflow-y:auto;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:6px 8px 22px 8px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    margin-bottom:16px;
+    position:relative;
+  }
+  .brand-icon{
+    width:38px;height:38px;border-radius:10px;
+    background:linear-gradient(135deg,#2f6fed,#7c5cff);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .brand-text h1{font-size:15px;margin:0;color:#fff;font-weight:700;letter-spacing:.2px;}
+  .brand-text p{font-size:11.5px;margin:2px 0 0;color:#8fa1c4;}
+  .collapse-btn{
+    margin-left:auto;
+    width:26px;height:26px;border-radius:7px;border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.04);color:#9fb0cf;
+    display:flex;align-items:center;justify-content:center;
+    transition:background .18s ease, color .18s ease, transform .3s ease;
+  }
+  .collapse-btn:hover{background:rgba(255,255,255,.12);color:#fff;}
+  .sidebar.collapsed{width:84px;}
+  .sidebar.collapsed .brand-text,
+  .sidebar.collapsed .nav-item span,
+  .sidebar.collapsed .promo-card{display:none;}
+  .sidebar.collapsed .collapse-btn svg{transform:rotate(180deg);}
+  .sidebar.collapsed .nav-item{justify-content:center;}
+
+  nav.nav-list{display:flex;flex-direction:column;gap:2px;margin-bottom:18px;}
+  .nav-item{
+    display:flex;align-items:center;gap:12px;
+    padding:10px 12px;border-radius:10px;
+    color:#a9b8d4;font-size:13.5px;font-weight:500;
+    transition:background .15s, color .15s;
+  }
+  .nav-item svg{flex-shrink:0;}
+  .nav-item .sub{display:block;font-size:11px;color:#7488ab;font-weight:400;margin-top:1px;}
+  .nav-item{transition:background .18s ease, color .18s ease, transform .18s ease;}
+  .nav-item:hover{background:rgba(255,255,255,.07);color:#fff;transform:translateX(3px);}
+  .nav-item.active{
+    background:linear-gradient(90deg, rgba(47,111,237,.22), rgba(47,111,237,.06));
+    color:#fff;
+    box-shadow:inset 3px 0 0 var(--blue);
+  }
+  .nav-item.active:hover{transform:none;}
+  .nav-item.active .sub{color:#c6d3ec;}
+
+  .promo-card{
+    margin-top:auto;
+    border-radius:16px;
+    overflow:hidden;
+    background:var(--navy-light);
+    border:1px solid rgba(255,255,255,.06);
+  }
+  .promo-img{
+    height:110px;width:100%;
+    background:
+      linear-gradient(180deg, rgba(11,31,58,0) 40%, rgba(11,31,58,.85) 100%),
+      radial-gradient(circle at 30% 30%, #3a5a92, #16264a 70%);
+    background-size:cover;
+  }
+  .promo-body{padding:14px 16px 16px;}
+  .promo-body h3{margin:0 0 8px;font-size:15px;line-height:1.3;color:#fff;}
+  .promo-body h3 span{color:#7fb3ff;}
+  .promo-body p{margin:0 0 14px;font-size:12px;line-height:1.55;color:#9fb0cf;}
+  .promo-btn{
+    display:inline-flex;align-items:center;gap:6px;
+    background:var(--green);color:#fff;font-size:12.5px;font-weight:600;
+    padding:9px 14px;border-radius:9px;border:none;
+    transition:background .18s ease, transform .18s ease, box-shadow .18s ease;
+  }
+  .promo-btn:hover{background:#0e8f45;transform:translateY(-2px);box-shadow:0 8px 18px rgba(22,163,74,.35);}
+
+  /* ---------- Main ---------- */
+  main{flex:1;min-width:0;padding:26px 32px 40px;}
+
+  .demo-banner{
+    display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+    background:linear-gradient(90deg,#fff7e6,#fef3e2);
+    border:1px solid #f5d9a8;color:#8a5a00;
+    padding:10px 16px;border-radius:12px;font-size:12.5px;font-weight:500;
+    margin-bottom:20px;
+  }
+  .demo-banner strong{font-weight:700;}
+  .demo-banner a{color:#8a5a00;text-decoration:underline;font-weight:600;}
+  .demo-tag{
+    display:inline-flex;align-items:center;gap:5px;
+    font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;
+    background:var(--orange-light);color:var(--orange);
+    padding:3px 8px;border-radius:20px;margin-left:8px;vertical-align:middle;
+  }
+
+  .topbar{
+    display:flex;align-items:center;justify-content:space-between;
+    margin-bottom:24px;flex-wrap:wrap;gap:16px;
+  }
+  .topbar h2{margin:0;font-size:22px;font-weight:700;color:var(--gray-900);}
+  .topbar h2 .wave{display:inline-block;transform:translateY(1px);}
+  .topbar p{margin:4px 0 0;font-size:13.5px;color:var(--gray-600);}
+
+  .topbar-right{display:flex;align-items:center;gap:18px;}
+  .search-box{
+    display:flex;align-items:center;gap:8px;
+    background:#fff;border:1px solid var(--gray-200);
+    border-radius:10px;padding:9px 14px;width:280px;
+    color:var(--gray-400);font-size:13px;
+    box-shadow:var(--shadow);
+  }
+  .search-box input{border:none;outline:none;background:transparent;font-size:13px;width:100%;color:var(--ink);}
+  .search-box{transition:box-shadow .18s ease, border-color .18s ease;}
+  .search-box:focus-within{border-color:var(--blue);box-shadow:0 0 0 3px rgba(47,111,237,.14);}
+  .bell{
+    position:relative;width:38px;height:38px;border-radius:10px;background:#fff;
+    display:flex;align-items:center;justify-content:center;border:1px solid var(--gray-200);
+    box-shadow:var(--shadow);color:var(--gray-600);
+    transition:transform .18s ease, color .18s ease, border-color .18s ease;
+  }
+  .bell:hover{transform:translateY(-2px);color:var(--blue);border-color:var(--blue);}
+  .bell .dot{
+    position:absolute;top:-5px;right:-5px;background:var(--pink);color:#fff;
+    font-size:10px;font-weight:700;width:17px;height:17px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;border:2px solid var(--gray-100);
+  }
+  .profile{display:flex;align-items:center;gap:10px;border-radius:10px;padding:4px 8px;transition:background .18s ease;}
+  .profile:hover{background:#fff;}
+  .avatar{
+    width:38px;height:38px;border-radius:50%;
+    background:linear-gradient(135deg,#f6b26b,#e07a5f);
+    display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px;
+  }
+  .profile-text p{margin:0;font-size:13.5px;font-weight:600;color:var(--gray-900);}
+  .profile-text span{font-size:11.5px;color:var(--gray-600);}
+  .profile svg{color:var(--gray-400);margin-left:2px;}
+
+  /* ---------- Stat cards ---------- */
+  .stats-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:22px;
+  }
+  .stat-card{
+    background:#fff;border-radius:var(--radius);padding:20px;
+    box-shadow:var(--shadow);border:1px solid var(--gray-200);
+    transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .stat-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(15,27,45,.09);border-color:#d7e0f0;}
+  .stat-top{display:flex;align-items:flex-start;justify-content:space-between;}
+  .stat-label{font-size:13px;color:var(--gray-600);font-weight:500;}
+  .stat-icon{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .stat-value{font-size:28px;font-weight:700;margin:10px 0 6px;color:var(--gray-900);}
+  .stat-trend{font-size:12.5px;font-weight:600;display:flex;align-items:center;gap:4px;}
+  .stat-trend.up{color:var(--green);}
+  .stat-trend.down{color:var(--pink);}
+  .stat-trend.neutral{color:var(--green);}
+
+  .icon-green{background:var(--green-light);color:var(--green);}
+  .icon-purple{background:var(--purple-light);color:var(--purple);}
+  .icon-pink{background:var(--pink-light);color:var(--pink);}
+  .icon-blue{background:var(--blue-light);color:var(--blue);}
+  .icon-orange{background:var(--orange-light);color:var(--orange);}
+
+  /* ---------- Panels layout ---------- */
+  .row-3{display:grid;grid-template-columns:1.15fr 1.3fr 1fr;gap:18px;margin-bottom:18px;align-items:start;}
+  .row-3b{display:grid;grid-template-columns:1.15fr 1.3fr 1fr;gap:18px;margin-bottom:18px;align-items:start;}
+
+  .panel{
+    background:#fff;border-radius:var(--radius);padding:20px;
+    box-shadow:var(--shadow);border:1px solid var(--gray-200);
+    transition:box-shadow .2s ease, border-color .2s ease;
+  }
+  .panel:hover{box-shadow:0 12px 28px rgba(15,27,45,.08);border-color:#dde4f0;}
+  .panel-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+  .panel-head h3{margin:0;font-size:15px;font-weight:700;color:var(--gray-900);}
+  .link-btn{
+    font-size:12.5px;font-weight:600;color:var(--blue);
+    background:var(--blue-light);padding:6px 12px;border-radius:8px;border:none;
+    display:inline-block;transition:background .18s ease, transform .18s ease;
+  }
+  .link-btn:hover{background:#dfeaff;transform:translateY(-1px);}
+  .dropdown-btn{
+    font-size:12.5px;font-weight:600;color:var(--gray-600);
+    background:var(--gray-100);padding:6px 12px;border-radius:8px;border:none;
+    display:flex;align-items:center;gap:6px;
+    transition:background .18s ease;
+  }
+  .dropdown-btn:hover{background:#e9edf4;}
+
+  /* progress list */
+  .progress-row{margin-bottom:14px;transition:transform .15s ease;}
+  .progress-row:hover{transform:translateX(2px);}
+  .progress-row:last-of-type{margin-bottom:0;}
+  .bar-fill{transition:filter .18s ease;}
+  .progress-row:hover .bar-fill{filter:brightness(1.08);}
+  .progress-top{display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px;}
+  .progress-top .name{color:var(--gray-900);font-weight:500;}
+  .progress-top .pct{color:var(--gray-600);font-weight:600;}
+  .bar-track{height:8px;border-radius:6px;background:var(--gray-200);overflow:hidden;}
+  .bar-fill{height:100%;border-radius:6px;}
+  .avg-box{
+    margin-top:16px;background:var(--green-light);border-radius:10px;
+    padding:12px 14px;display:flex;align-items:center;justify-content:space-between;
+  }
+  .avg-box .left{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--gray-900);font-weight:500;}
+  .avg-box .val{font-size:16px;font-weight:700;color:var(--green);}
+  .mini-icon{width:26px;height:26px;border-radius:7px;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--green);}
+
+  /* chart panel */
+  .chart-wrap{position:relative;}
+  .chart-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;}
+  .chart-stat{
+    background:var(--gray-100);border-radius:10px;padding:10px 12px;
+    display:flex;flex-direction:column;gap:6px;
+  }
+  .chart-stat .top{display:flex;align-items:center;gap:8px;}
+  .chart-stat .icon{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;}
+  .chart-stat .num{font-size:16px;font-weight:700;color:var(--gray-900);}
+  .chart-stat .lbl{font-size:11px;color:var(--gray-600);}
+
+  /* events */
+  .event-item{display:flex;gap:12px;align-items:flex-start;padding:11px 8px;border-bottom:1px solid var(--gray-100);border-radius:9px;transition:background .18s ease;margin:0 -8px;}
+  .event-item:hover{background:var(--gray-100);}
+  .event-item:last-child{border-bottom:none;}
+  .event-item:first-child{}
+  .event-date{
+    width:42px;height:42px;border-radius:9px;background:var(--blue-light);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .event-date .mon{font-size:9.5px;font-weight:700;color:var(--blue);text-transform:uppercase;}
+  .event-date .day{font-size:14px;font-weight:700;color:var(--blue);line-height:1;}
+  .event-title{font-size:13px;font-weight:600;color:var(--gray-900);}
+  .event-sub{font-size:11.5px;color:var(--gray-600);margin-top:2px;}
+  .event-time{margin-left:auto;font-size:11.5px;color:var(--gray-600);white-space:nowrap;padding-top:4px;}
+  .event-row-flex{display:flex;width:100%;align-items:flex-start;gap:8px;}
+
+  /* tickets */
+  .ticket-row{display:flex;align-items:center;gap:12px;padding:10px 8px;border-bottom:1px solid var(--gray-100);font-size:13px;border-radius:9px;transition:background .18s ease;margin:0 -8px;}
+  .ticket-row:hover{background:var(--gray-100);}
+  .ticket-row:last-child{border-bottom:none;}
+  .ticket-row:first-child{}
+  .ticket-id{color:var(--blue);font-weight:600;font-size:12.5px;flex-shrink:0;width:66px;}
+  .ticket-desc{color:var(--gray-900);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .badge{font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;white-space:nowrap;}
+  .badge-progress{background:var(--blue-light);color:var(--blue);}
+  .badge-open{background:var(--orange-light);color:var(--orange);}
+  .badge-resolved{background:var(--green-light);color:var(--green);}
+  .ticket-time{color:var(--gray-400);font-size:11.5px;width:54px;text-align:right;flex-shrink:0;}
+
+  /* system status */
+  .status-row{display:flex;align-items:center;justify-content:space-between;padding:10px 8px;border-bottom:1px solid var(--gray-100);font-size:13.5px;color:var(--gray-900);border-radius:9px;transition:background .18s ease;margin:0 -8px;}
+  .status-row:hover{background:var(--gray-100);}
+  .status-row:last-of-type{border-bottom:none;}
+  .status-row:first-child{}
+  .badge-op{background:var(--green-light);color:var(--green);font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;}
+  .status-view-all{display:inline-block;margin-top:12px;font-size:12.5px;font-weight:600;color:var(--blue);transition:gap .18s ease, transform .18s ease;}
+  .status-view-all:hover{transform:translateX(3px);}
+
+  /* job applications */
+  .job-card{background:var(--blue-light);border-radius:12px;padding:16px;transition:box-shadow .18s ease, transform .18s ease;}
+  .job-card:hover{box-shadow:0 10px 22px rgba(47,111,237,.18);transform:translateY(-2px);}
+  .job-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px;}
+  .job-top h4{margin:0;font-size:14px;color:var(--gray-900);}
+  .badge-submitted{background:#dff3e5;color:var(--green);font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;}
+  .job-dept{font-size:12.5px;color:var(--gray-600);margin:2px 0 12px;}
+  .job-meta{font-size:11.5px;color:var(--gray-600);line-height:1.7;}
+  .job-link{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:600;color:var(--blue);transition:transform .18s ease;}
+  .job-link:hover{transform:translateX(3px);}
+
+  /* Quick actions */
+  .quick-actions{
+    display:grid;grid-template-columns:repeat(6,1fr);gap:14px;
+  }
+  .qa-btn{
+    display:flex;align-items:center;justify-content:center;gap:9px;
+    padding:14px 10px;border-radius:12px;border:1px solid var(--gray-200);
+    font-size:13px;font-weight:600;color:var(--gray-900);background:#fff;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .qa-btn:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(15,27,45,.1);}
+  .qa-btn svg{flex-shrink:0;}
+  .qa-btn.qa-green{background:var(--green-light);border-color:transparent;color:#0e7c3f;}
+  .qa-btn.qa-purple{background:var(--purple-light);border-color:transparent;color:#5b3ff0;}
+  .qa-btn.qa-blue{background:var(--blue-light);border-color:transparent;color:var(--blue);}
+  .qa-btn.qa-pink{background:var(--pink-light);border-color:transparent;color:var(--pink);}
+  .qa-btn.qa-orange{background:var(--orange-light);border-color:transparent;color:var(--orange);}
+  .qa-btn.qa-gray{background:var(--gray-100);border-color:transparent;color:var(--gray-600);}
+
+  footer{
+    margin-top:26px;padding-top:18px;border-top:1px solid var(--gray-200);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+    font-size:12px;color:var(--gray-600);
+  }
+  footer .flinks{display:flex;gap:18px;}
+  footer a:hover{color:var(--blue);}
+
+  @media (max-width:1200px){
+    .stats-grid{grid-template-columns:repeat(2,1fr);}
+    .row-3,.row-3b{grid-template-columns:1fr;}
+    .quick-actions{grid-template-columns:repeat(3,1fr);}
+  }
+  @media (max-width:860px){
+    .sidebar{display:none;}
+    .stats-grid{grid-template-columns:1fr;}
+    .quick-actions{grid-template-columns:repeat(2,1fr);}
+    .search-box{width:180px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= UTILITY BAR ================= -->
+<div class="util-bar">
+  <div class="util-left">
+    <span>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+      1-306-252-1000
+    </span>
+    <span>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      info@saskdlc.ca
+    </span>
+    <span>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-4Z"/></svg>
+      In My house, SK · Demo build For myself
+    </span>
+  </div>
+  <div class="util-right">
+    <a href="https://www.facebook.com/saskDLC" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/saskDLC/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+    </a>
+    <a href="https://www.youtube.com/@saskDLC" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 8.5s-.2-1.6-.8-2.3c-.8-.8-1.7-.8-2.1-.9C16.3 5 12 5 12 5s-4.3 0-7.1.3c-.4 0-1.3.1-2.1.9C2.2 6.9 2 8.5 2 8.5S1.8 10.3 1.8 12v1.9c0 1.8.2 3.6.2 3.6s.2 1.6.8 2.3c.8.8 1.9.8 2.4.9 1.7.2 7.3.3 7.3.3s4.3 0 7.1-.3c.4 0 1.3-.1 2.1-.9.6-.7.8-2.3.8-2.3s.2-1.8.2-3.6V12c0-1.7-.2-3.5-.2-3.5Z"/><path d="m10 15 5-3-5-3v6Z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/company/saskatchewan-distance-learning-centre/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6.9 8.4H3.6V20h3.3V8.4ZM5.3 3.4a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8ZM20.4 20h-3.3v-6c0-1.4 0-3.3-2-3.3s-2.3 1.6-2.3 3.2V20H9.5V8.4h3.2v1.6h.1c.4-.8 1.6-1.7 3.2-1.7 3.4 0 4 2.2 4 5.2V20Z"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- ================= SITE HEADER ================= -->
+<header class="site-header">
+  <a class="site-logo" href="https://www.saskdlc.ca" target="_blank" rel="noopener">
+    <div class="site-logo-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5c3-1.5 6-1.5 8 0v14c-2-1.5-5-1.5-8 0V5Z" fill="#fff" opacity=".9"/><path d="M20 5c-3-1.5-6-1.5-8 0v14c2-1.5 5-1.5 8 0V5Z" fill="#fff" opacity=".65"/></svg>
+    </div>
+    <div class="site-logo-text">
+      <h1>SASK DLC</h1>
+      <p>Digital Learning Centre</p>
+    </div>
+  </a>
+
+  <nav class="site-nav-links">
+    <a href="https://www.saskdlc.ca/about-us" target="_blank" rel="noopener">About Us</a>
+    <a href="https://www.saskdlc.ca/take-a-course" target="_blank" rel="noopener">Take a Course</a>
+    <a href="https://www.saskdlc.ca/gr10-12" target="_blank" rel="noopener">Grades 10–12</a>
+    <a href="https://www.saskdlc.ca/adults" target="_blank" rel="noopener">Adults</a>
+    <a href="#dashboard-demo">Staff Portal Demo</a>
+    <a href="https://www.saskdlc.ca/careers" target="_blank" rel="noopener">Careers</a>
+  </nav>
+
+  <div class="header-cta">
+    <a class="btn btn-ghost" href="https://www.dlcgo.ca/PublicWelcome.aspx" target="_blank" rel="noopener">DLCgo Login</a>
+    <a class="btn btn-gold" href="https://www.saskdlc.ca/register" target="_blank" rel="noopener">Register Now</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow"><span class="dotpulse"></span> K–12 Online Education, Province-Wide</div>
+    <h2>Joshua Okpafi says Learning anytime,<br><span>anywhere</span> in Saskatchewan.</h2>
+    <p class="lede">Sask DLC is a fully accredited online school offering Kindergarten to Grade 12 education to students of every age and background — wherever they call home in the province.</p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="https://www.saskdlc.ca/pathways" target="_blank" rel="noopener">
+        Explore Courses
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn-outline-white" href="#dashboard-demo">See the Staff Dashboard Demo</a>
+    </div>
+    <div class="hero-trust">
+      <div><span class="num">5,523</span><span class="lbl">Students Served</span></div>
+      <div><span class="num">128</span><span class="lbl">Active Courses</span></div>
+      <div><span class="num">12</span><span class="lbl">Regional Campuses</span></div>
+      <div><span class="num">99.9%</span><span class="lbl">Platform Uptime</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PATHWAYS ================= -->
+<section class="section" id="pathways">
+  <div class="section-head">
+    <span class="eyebrow">Joshua says - How Can We Help You?</span>
+    <h3>Three ways to learn with Sask DLC</h3>
+    <p>Students choose Sask DLC for many different reasons — find the option that fits your life.</p>
+  </div>
+
+  <div class="pathways-grid">
+    <a class="pathway-card" href="https://www.saskdlc.ca/take-a-course" target="_blank" rel="noopener" style="display:block;">
+      <div class="pathway-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg>
+      </div>
+      <h4>Take a Sask DLC Course</h4>
+      <p>Stay enrolled at your local high school and add one of 120+ online course options that fit your schedule and interests.</p>
+      <span class="pathway-link">Learn more →</span>
+    </a>
+
+    <a class="pathway-card" href="https://www.saskdlc.ca/learn-from-home" target="_blank" rel="noopener" style="display:block;">
+      <div class="pathway-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+      </div>
+      <h4>Learn From Home</h4>
+      <p>Full-time accredited online courses from Kindergarten to Grade 12, taught by experienced Saskatchewan teachers.</p>
+      <span class="pathway-link">Learn more →</span>
+    </a>
+
+    <a class="pathway-card" href="https://www.saskdlc.ca/adults" target="_blank" rel="noopener" style="display:block;">
+      <div class="pathway-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M19 8v6M22 11h-6"/></svg>
+      </div>
+      <h4>Adults</h4>
+      <p>Complete your diploma, fulfill post-secondary requirements, or upgrade marks — on a schedule that works for you.</p>
+      <span class="pathway-link">Learn more →</span>
+    </a>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<div class="gallery-wrap">
+  <div class="gallery-inner">
+    <div class="section-head">
+      <span class="eyebrow">Rooted in Saskatchewan</span>
+      <h3>Built for testing purpose only</h3>
+      <p>From Nigeria to every corner of the world — quality online learning close to home.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Canola%20field.jpg?width=900" alt="Canola field, East Central Saskatchewan" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#128a52,#0b6a41)'; this.remove();">
+        <div class="gallery-caption">Saskatchewan canola fields — our province, our classroom</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/E-learningE-E-Learning%20Computer.jpg?width=700" alt="Student learning online on a computer" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#f1c730,#c99a12)'; this.remove();">
+        <div class="gallery-caption">Personalized online learning</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Students%20writing%20in%20class.jpg?width=700" alt="Students engaged in class work" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#2f6fed,#7c5cff)'; this.remove();">
+        <div class="gallery-caption">Support from real Saskatchewan teachers</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20grain%20elevator%20in%20Rouleau%2C%20Saskatchewan..JPG?width=700" alt="Grain elevator in Rouleau, Saskatchewan" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#0b6a41,#063f27)'; this.remove();">
+        <div class="gallery-caption">A familiar skyline, K–12 access everywhere</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="app-shell">
+  <!-- ================= SIDEBAR ================= -->
+<aside class="sidebar">
+  <div class="brand">
+    <a href="https://www.saskdlc.ca" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:12px;min-width:0;">
+      <div class="brand-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5c3-1.5 6-1.5 8 0v14c-2-1.5-5-1.5-8 0V5Z" fill="#fff" opacity=".9"/><path d="M20 5c-3-1.5-6-1.5-8 0v14c2-1.5 5-1.5 8 0V5Z" fill="#fff" opacity=".65"/></svg>
+      </div>
+      <div class="brand-text">
+        <h1>SASK DLC</h1>
+        <p>Digital Learning Centre</p>
+      </div>
+    </a>
+    <button class="collapse-btn" type="button" aria-label="Collapse sidebar">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+  </div>
+
+  <nav class="nav-list">
+    <a class="nav-item active" href="https://www.saskdlc.ca" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+      <span>Overview</span>
+    </a>
+    <a class="nav-item" href="https://www.dlcgo.ca" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+      <span>LMS<span class="sub">Learning Management</span></span>
+    </a>
+    <a class="nav-item" href="https://www.saskdlc.ca/about-us" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15.5 14.5c2.6.3 4.5 2.4 4.5 5.5"/></svg>
+      <span>SIS<span class="sub">Student Information</span></span>
+    </a>
+    <a class="nav-item" href="https://www.saskdlc.ca/registration" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg>
+      <span>Registration<span class="sub">Course Registration</span></span>
+    </a>
+    <a class="nav-item" href="https://www.saskdlc.ca/contact-us" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+      <span>Support<span class="sub">IT Support Tickets</span></span>
+    </a>
+    <a class="nav-item" href="https://www.saskdlc.ca" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M12 20V4M20 20v-7"/></svg>
+      <span>Analytics<span class="sub">Reports &amp; Insights</span></span>
+    </a>
+    <a class="nav-item" href="https://www.saskdlc.ca/contact-us" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      <span>Communications<span class="sub">Messages &amp; Alerts</span></span>
+    </a>
+    <a class="nav-item" href="https://www.saskdlc.ca/careers" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+      <span>Careers<span class="sub">Job Opportunities</span></span>
+    </a>
+  </nav>
+
+  <div class="promo-card">
+    <div class="promo-img"></div>
+    <div class="promo-body">
+      <h3>Learning Anytime,<br><span>Anywhere</span></h3>
+      <p>Empowering students across Saskatchewan through quality online education.</p>
+      <a class="promo-btn" href="https://www.saskdlc.ca" target="_blank" rel="noopener">Learn More
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</aside>
+
+<!-- ================= MAIN ================= -->
+<main id="dashboard-demo">
+
+  <div class="demo-banner">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+    <span><strong>Demo &amp; Joshua Joshua Okpafi Testing Purpose!!!!! showcase</strong> — this dashboard is a design concept only, not an official Sask DLC system. All names, stats and tickets shown are sample data. Visit the real school at <a href="https://www.saskdlc.ca" target="_blank" rel="noopener">saskdlc.ca</a>.</span>
+  </div>
+
+  <div class="topbar">
+    <div>
+      <h2>Good morning, Joshua <span class="wave">👋</span><span class="demo-tag">Demo build</span></h2>
+      <p>Here's what's happening with Sask DLC today.</p>
+    </div>
+    <div class="topbar-right">
+      <form class="search-box" action="https://www.saskdlc.ca" method="get" target="_blank">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" placeholder="Search students, courses, tickets...">
+      </form>
+      <a class="bell" href="https://www.saskdlc.ca/contact-us" target="_blank" rel="noopener" aria-label="Notifications">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+        <span class="dot">3</span>
+      </a>
+      <a class="profile" href="https://www.saskdlc.ca/about-us" target="_blank" rel="noopener">
+        <div class="avatar">JO</div>
+        <div class="profile-text">
+          <p>Joshua Okpafi</p>
+          <span>System Admin</span>
+        </div>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Stat cards -->
+  <section class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-top">
+        <span class="stat-label">Total Students</span>
+        <div class="stat-icon icon-green">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15.5 14.5c2.6.3 4.5 2.4 4.5 5.5"/></svg>
+        </div>
+      </div>
+      <div class="stat-value">5,523</div>
+      <div class="stat-trend up">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m6 15 6-6 6 6"/></svg>
+        +142 this week
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-top">
+        <span class="stat-label">Active Courses</span>
+        <div class="stat-icon icon-purple">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c3-1.5 6-1.5 8 0v14c-2-1.5-5-1.5-8 0V5Z"/><path d="M20 5c-3-1.5-6-1.5-8 0v14c2-1.5 5-1.5 8 0V5Z"/></svg>
+        </div>
+      </div>
+      <div class="stat-value">128</div>
+      <div class="stat-trend up">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m6 15 6-6 6 6"/></svg>
+        +8 this week
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-top">
+        <span class="stat-label">Open Tickets</span>
+        <div class="stat-icon icon-pink">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m11 4 9 9-6 6-9-9V4h6Z"/><circle cx="8.5" cy="7.5" r="1"/></svg>
+        </div>
+      </div>
+      <div class="stat-value">14</div>
+      <div class="stat-trend down">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m6 9 6 6 6-6"/></svg>
+        -3 from yesterday
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-top">
+        <span class="stat-label">System Uptime</span>
+        <div class="stat-icon icon-blue">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+      </div>
+      <div class="stat-value">99.9%</div>
+      <div class="stat-trend neutral">All systems operational</div>
+    </div>
+  </section>
+
+  <!-- Row 1 -->
+  <section class="row-3">
+
+    <!-- Student progress -->
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Student Progress Overview (LMS)</h3>
+        <a class="link-btn" href="https://www.saskdlc.ca" target="_blank" rel="noopener">View all</a>
+      </div>
+
+      <div class="progress-row">
+        <div class="progress-top"><span class="name">Mathematics 10</span><span class="pct">72%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:72%;background:#16c98a;"></div></div>
+      </div>
+      <div class="progress-row">
+        <div class="progress-top"><span class="name">English Language Arts 20</span><span class="pct">58%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:58%;background:#7c5cff;"></div></div>
+      </div>
+      <div class="progress-row">
+        <div class="progress-top"><span class="name">Computer Science 30</span><span class="pct">86%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:86%;background:#2f6fed;"></div></div>
+      </div>
+      <div class="progress-row">
+        <div class="progress-top"><span class="name">Physics 20</span><span class="pct">64%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:64%;background:#f59e0b;"></div></div>
+      </div>
+      <div class="progress-row">
+        <div class="progress-top"><span class="name">Biology 30</span><span class="pct">79%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:79%;background:#16c98a;"></div></div>
+      </div>
+
+      <div class="avg-box">
+        <div class="left">
+          <div class="mini-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M12 20V4M20 20v-7"/></svg>
+          </div>
+          Average Progress Across All Courses
+        </div>
+        <div class="val">71%</div>
+      </div>
+    </div>
+
+    <!-- Course activity chart -->
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Course Activity</h3>
+        <a class="dropdown-btn" href="https://www.saskdlc.ca" target="_blank" rel="noopener">This Week
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+      </div>
+
+      <div class="chart-wrap">
+        <svg viewBox="0 0 560 240" width="100%" height="200" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2f6fed" stop-opacity="0.22"/>
+              <stop offset="100%" stop-color="#2f6fed" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <!-- gridlines -->
+          <g stroke="#eef1f6" stroke-width="1">
+            <line x1="40" y1="10" x2="560" y2="10"/>
+            <line x1="40" y1="55" x2="560" y2="55"/>
+            <line x1="40" y1="100" x2="560" y2="100"/>
+            <line x1="40" y1="145" x2="560" y2="145"/>
+            <line x1="40" y1="190" x2="560" y2="190"/>
+          </g>
+          <g fill="#8f9dae" font-size="11" font-family="Inter, sans-serif">
+            <text x="0" y="14">1,000</text>
+            <text x="10" y="59">750</text>
+            <text x="10" y="104">500</text>
+            <text x="10" y="149">250</text>
+            <text x="22" y="194">0</text>
+          </g>
+          <!-- area + line: Mon..Sun values approx 480,620,700,820,660,560,700 mapped to y(0-1000 -> 190..10) -->
+          <path d="M60,144 L140,111 L220,90 L300,42 L380,100 L460,133 L540,90 L540,190 L60,190 Z" fill="url(#areaFill)"/>
+          <polyline points="60,144 140,111 220,90 300,42 380,100 460,133 540,90" fill="none" stroke="#2f6fed" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <g fill="#2f6fed">
+            <circle cx="60" cy="144" r="4"/><circle cx="140" cy="111" r="4"/><circle cx="220" cy="90" r="4"/>
+            <circle cx="300" cy="42" r="5" stroke="#fff" stroke-width="2"/><circle cx="380" cy="100" r="4"/>
+            <circle cx="460" cy="133" r="4"/><circle cx="540" cy="90" r="4"/>
+          </g>
+          <!-- tooltip -->
+          <g>
+            <rect x="255" y="6" width="120" height="34" rx="8" fill="#0f1b2d"/>
+            <text x="265" y="19" fill="#9fb0cf" font-size="9.5" font-family="Inter, sans-serif">Thursday</text>
+            <text x="265" y="31" fill="#fff" font-size="10.5" font-weight="700" font-family="Inter, sans-serif">Activities: 820</text>
+          </g>
+          <g fill="#8f9dae" font-size="11" font-family="Inter, sans-serif">
+            <text x="52" y="210">Mon</text><text x="130" y="210">Tue</text><text x="212" y="210">Wed</text>
+            <text x="292" y="210">Thu</text><text x="372" y="210">Fri</text><text x="452" y="210">Sat</text><text x="532" y="210">Sun</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="chart-stats">
+        <div class="chart-stat">
+          <div class="top"><div class="icon icon-blue"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/></svg></div><span class="num">4,120</span></div>
+          <span class="lbl">Total Activities</span>
+        </div>
+        <div class="chart-stat">
+          <div class="top"><div class="icon icon-green"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div><span class="num">820</span></div>
+          <span class="lbl">Peak (Thu)</span>
+        </div>
+        <div class="chart-stat">
+          <div class="top"><div class="icon icon-purple"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></div><span class="num">2,980</span></div>
+          <span class="lbl">Assignments</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upcoming events -->
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Upcoming Events</h3>
+        <a class="link-btn" href="https://www.saskdlc.ca" target="_blank" rel="noopener">View calendar</a>
+      </div>
+
+      <div class="event-item">
+        <div class="event-row-flex">
+          <div class="event-date"><span class="mon">Jun</span><span class="day">10</span></div>
+          <div>
+            <div class="event-title">Course Registration Opens</div>
+            <div class="event-sub">All Grade 10-12 Courses</div>
+          </div>
+          <span class="event-time">8:00 AM</span>
+        </div>
+      </div>
+      <div class="event-item">
+        <div class="event-row-flex">
+          <div class="event-date"><span class="mon">Jun</span><span class="day">15</span></div>
+          <div>
+            <div class="event-title">New Student Orientation</div>
+            <div class="event-sub">Online Webinar</div>
+          </div>
+          <span class="event-time">10:00 AM</span>
+        </div>
+      </div>
+      <div class="event-item">
+        <div class="event-row-flex">
+          <div class="event-date"><span class="mon">Jun</span><span class="day">20</span></div>
+          <div>
+            <div class="event-title">Midterm Assessments</div>
+            <div class="event-sub">All Active Courses</div>
+          </div>
+          <span class="event-time">9:00 AM</span>
+        </div>
+      </div>
+      <div class="event-item">
+        <div class="event-row-flex">
+          <div class="event-date"><span class="mon">Jun</span><span class="day">28</span></div>
+          <div>
+            <div class="event-title">Student Success Workshop</div>
+            <div class="event-sub">Study Skills &amp; Time Management</div>
+          </div>
+          <span class="event-time">1:00 PM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Row 2 -->
+  <section class="row-3b">
+
+    <!-- Support tickets -->
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Recent Support Tickets</h3>
+        <a class="link-btn" href="https://www.saskdlc.ca/contact-us" target="_blank" rel="noopener">View all</a>
+      </div>
+
+      <div class="ticket-row">
+        <span class="ticket-id">#TCK-1047</span>
+        <span class="ticket-desc">Login issue for student portal</span>
+        <span class="badge badge-progress">In Progress</span>
+        <span class="ticket-time">2m ago</span>
+      </div>
+      <div class="ticket-row">
+        <span class="ticket-id">#TCK-1046</span>
+        <span class="ticket-desc">Unable to access course materials</span>
+        <span class="badge badge-open">Open</span>
+        <span class="ticket-time">15m ago</span>
+      </div>
+      <div class="ticket-row">
+        <span class="ticket-id">#TCK-1045</span>
+        <span class="ticket-desc">Assignment submission error</span>
+        <span class="badge badge-resolved">Resolved</span>
+        <span class="ticket-time">1h ago</span>
+      </div>
+      <div class="ticket-row">
+        <span class="ticket-id">#TCK-1044</span>
+        <span class="ticket-desc">Video playback not working</span>
+        <span class="badge badge-resolved">Resolved</span>
+        <span class="ticket-time">2h ago</span>
+      </div>
+    </div>
+
+    <!-- System status -->
+    <div class="panel">
+      <div class="panel-head">
+        <h3>System Status</h3>
+      </div>
+
+      <div class="status-row"><span>LMS Platform</span><span class="badge-op">Operational</span></div>
+      <div class="status-row"><span>SIS System</span><span class="badge-op">Operational</span></div>
+      <div class="status-row"><span>Registration System</span><span class="badge-op">Operational</span></div>
+      <div class="status-row"><span>Email Services</span><span class="badge-op">Operational</span></div>
+      <div class="status-row"><span>Video Conferencing</span><span class="badge-op">Operational</span></div>
+
+      <a class="status-view-all" href="https://www.saskdlc.ca" target="_blank" rel="noopener">View all system status →</a>
+    </div>
+
+    <!-- Job applications -->
+    <div class="panel">
+      <div class="panel-head">
+        <h3>My Job Applications</h3>
+        <a class="link-btn" href="https://www.saskdlc.ca/careers" target="_blank" rel="noopener">View all applications</a>
+      </div>
+
+      <div class="job-card">
+        <div class="job-top">
+          <h4>Front End Developer</h4>
+          <span class="badge-submitted">Submitted</span>
+        </div>
+        <div class="job-dept">Information Technology</div>
+        <div class="job-meta">
+          Job ID: FRONT001315-00003<br>
+          Applied: July 2, 2026
+        </div>
+        <a class="job-link" href="https://www.saskdlc.ca/careers" target="_blank" rel="noopener">See application details →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick actions -->
+  <section class="panel">
+    <div class="panel-head" style="margin-bottom:16px;">
+      <h3>Quick Actions</h3>
+    </div>
+    <div class="quick-actions">
+      <a class="qa-btn qa-green" href="https://www.saskdlc.ca/registration" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M19 8v6M22 11h-6"/></svg>
+        Add New Student
+      </a>
+      <a class="qa-btn qa-purple" href="https://www.saskdlc.ca/course-catalogue" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5c3-1.5 6-1.5 8 0v14c-2-1.5-5-1.5-8 0V5Z"/><path d="M20 5c-3-1.5-6-1.5-8 0v14c2-1.5 5-1.5 8 0V5Z"/></svg>
+        Create Course
+      </a>
+      <a class="qa-btn qa-blue" href="https://www.saskdlc.ca" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l18-7-7 18-2-8-9-3Z"/></svg>
+        New Announcement
+      </a>
+      <a class="qa-btn qa-pink" href="https://www.saskdlc.ca/contact-us" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m11 4 9 9-6 6-9-9V4h6Z"/><circle cx="8.5" cy="7.5" r="1"/></svg>
+        Open Ticket
+      </a>
+      <a class="qa-btn qa-orange" href="https://www.saskdlc.ca" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2Z"/><path d="M9 13h6M9 17h6"/></svg>
+        Generate Report
+      </a>
+      <a class="qa-btn qa-gray" href="https://www.saskdlc.ca" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 0 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.55-1H3a2 2 0 0 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34H9a1.7 1.7 0 0 0 1-1.55V3a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87V9a1.7 1.7 0 0 0 1.55 1H21a2 2 0 0 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1Z"/></svg>
+        System Settings
+      </a>
+    </div>
+  </section>
+
+
+</main>
+</div><!-- /.app-shell -->
+
+<!-- ================= CTA BAND ================= -->
+<section class="cta-band">
+  <div class="cta-band-inner">
+    <h3>Ready to register for 2026–27?</h3>
+    <p>New student registration and high school course sign-ups are open now. Find your pathway and get started today.</p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="https://www.saskdlc.ca/register" target="_blank" rel="noopener">Register Now</a>
+      <a class="btn btn-outline-white" href="https://www.saskdlc.ca/contact-us" target="_blank" rel="noopener">Talk to Admissions</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SITE FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">
+        <div class="site-logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 5c3-1.5 6-1.5 8 0v14c-2-1.5-5-1.5-8 0V5Z" fill="#fff" opacity=".9"/><path d="M20 5c-3-1.5-6-1.5-8 0v14c2-1.5 5-1.5 8 0V5Z" fill="#fff" opacity=".65"/></svg>
+        </div>
+        <h4>SASK DLC</h4>
+      </div>
+      <p>Saskatchewan Distance Learning Centre provides Kindergarten to Grade 12 courses to Saskatchewan students who choose to study online. This page is an unofficial demo build only.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/saskDLC" target="_blank" rel="noopener" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg></a>
+        <a href="https://www.instagram.com/saskDLC/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="https://www.youtube.com/@saskDLC" target="_blank" rel="noopener" aria-label="YouTube"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 8.5s-.2-1.6-.8-2.3c-.8-.8-1.7-.8-2.1-.9C16.3 5 12 5 12 5s-4.3 0-7.1.3c-.4 0-1.3.1-2.1.9C2.2 6.9 2 8.5 2 8.5S1.8 10.3 1.8 12v1.9c0 1.8.2 3.6.2 3.6s.2 1.6.8 2.3c.8.8 1.9.8 2.4.9 1.7.2 7.3.3 7.3.3s4.3 0 7.1-.3c.4 0 1.3-.1 2.1-.9.6-.7.8-2.3.8-2.3s.2-1.8.2-3.6V12c0-1.7-.2-3.5-.2-3.5Z"/><path d="m10 15 5-3-5-3v6Z"/></svg></a>
+        <a href="https://www.linkedin.com/company/saskatchewan-distance-learning-centre/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.9 8.4H3.6V20h3.3V8.4ZM5.3 3.4a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8ZM20.4 20h-3.3v-6c0-1.4 0-3.3-2-3.3s-2.3 1.6-2.3 3.2V20H9.5V8.4h3.2v1.6h.1c.4-.8 1.6-1.7 3.2-1.7 3.4 0 4 2.2 4 5.2V20Z"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h5>Learning</h5>
+      <ul>
+        <li><a href="https://www.saskdlc.ca/news-releases" target="_blank" rel="noopener">News</a></li>
+        <li><a href="https://www.saskdlc.ca/careers" target="_blank" rel="noopener">Careers</a></li>
+        <li><a href="https://www.saskdlc.ca/contact-us" target="_blank" rel="noopener">Contact</a></li>
+        <li><a href="https://www.saskdlc.ca/refund-policy" target="_blank" rel="noopener">Refund Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="https://www.dlcgo.ca/" target="_blank" rel="noopener">DLCgo</a></li>
+        <li><a href="https://studentservices.saskdlc.help/support/home" target="_blank" rel="noopener">Help Desk</a></li>
+        <li><a href="https://www.saskdlc.ca/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></li>
+        <li><a href="https://resourcebank.ca/" target="_blank" rel="noopener">Resource Bank</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Connect</h5>
+      <ul class="footer-contact">
+        <li>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-4Z"/></svg>
+          Main office: 408 – 5th Avenue, Kenaston, SK S0G 2N0
+        </li>
+        <li>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          1-306-252-1000 · Toll free 1-844-515-3276
+        </li>
+        <li>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          info@saskdlc.ca
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Saskatchewan Distance Learning Centre. Unofficial demo build — not the real Sask DLC website.</span>
+    <div class="flinks">
+      <a href="https://www.saskdlc.ca/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+      <a href="https://www.saskdlc.ca" target="_blank" rel="noopener">Visit saskdlc.ca</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelector('.collapse-btn').addEventListener('click', function(){
+    document.querySelector('.sidebar').classList.toggle('collapsed');
+  });
+</script>
+
+</body>
+</html>
